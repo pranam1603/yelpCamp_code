@@ -1,5 +1,4 @@
-module.exports = [
-    {
+module.exports = [{
         city: "New York",
         growth_from_2000_to_2013: "4.8%",
         latitude: 40.7127837,

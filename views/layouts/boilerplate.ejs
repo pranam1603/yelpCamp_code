@@ -5,18 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://xp.io/storage/1YOdUn5F.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="/css/map.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+
     <title>Yelp Camp</title>
 </head>
 
-<body>
-    <%- include('../partials/navbar.ejs') %>
-        <main class="container mt-5">
-            <%- body %>
-        </main>
+<body class="d-flex flex-column vh-100">
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <%- include('../partials/navbar.ejs') %>
+    <main class="container mt-5">
+        <%- include('../partials/flash.ejs') %>
+        <%- body %>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+
+    <script src="/js/validateForm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+ 
 </body>
 
 </html>

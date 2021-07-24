@@ -1,0 +1,24 @@
+#cluster-map{
+    width: 100%;
+    height: 460px;
+}
+
+#map{
+    width: 100%;
+    height: 300px;
+    border: 1px solid black;
+}
+
+@media (max-width: 450px) {
+.starability-heart{
+    margin: 0 auto;
+}
+
+.btn-outline-info{
+    font-size: 13px;
+}
+
+.btn-outline-danger{
+    font-size: 13px;
+}
+}

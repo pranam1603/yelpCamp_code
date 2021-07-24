@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(245, 245, 245);
+}
+
+.camp_image{
+    width: 50px;
+}
+
+.logo_text{
+    font-size: 22px;
+    margin-right: 20px;
+    text-decoration: none;
+}
