@@ -8,9 +8,7 @@ module.exports.register = async(req, res, next) =>{
     try{
         const {email, username, password} = req.body;
         const newuser = new User({username, email});
-            console.log(req.user);
         const registeredUser = await User.register(newuser, password)
-        console.log(newUser);
         req.login( registeredUser, err =>{
             if(err) return next(err);
             req.flash('success', "Welcome to YelpCamp!");

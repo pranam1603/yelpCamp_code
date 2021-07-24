@@ -22,9 +22,6 @@ const helmet = require("helmet");
 
 const MongoStore = require('connect-mongo');
 
-const port = 8080;
-const hostname = 'localhost';
-
 const MONGO_URL = process.env.MONGO_ATLAS_URL || 'mongodb://localhost:27017/yelp-camp'
 
 mongoose.connect(MONGO_URL, {
@@ -159,6 +156,8 @@ app.use((err, req, res, next) =>{
     res.status(statusCode).render('campground/error', {err});
 })
 
-app.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+const port = process.env.PORT || 8080
+
+app.listen(port, () => {
+    console.log(`Server running at ${port} port`);
 });
